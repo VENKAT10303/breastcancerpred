@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 import warnings
 warnings.filterwarnings("ignore")
-df = pd.read_csv(r"C:\Users\venkat thota\OneDrive\Dokumen\internpe\breastcancerdataset.csv")
+df = pd.read_csv("breastcancerdataset.csv")
 if 'id' in df.columns:
     df = df.drop(columns=['id'])
 df['diagnosis'] = df['diagnosis'].map({'M': 0, 'B': 1})
